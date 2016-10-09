@@ -16,9 +16,16 @@
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.3/pixi.min.js"></script>
     <script>
+        // Aliases
+        let Container = PIXI.Container,
+            autoDetectRenderer = PIXI.autoDetectRenderer,
+            resources = PIXI.loader.resources,
+            Sprite = PIXI.Sprite;
+        //
+
         // create stage and the renderer
-        let stage = new PIXI.Container(),
-            renderer = PIXI.autoDetectRenderer(800, 600);
+        let stage = new Container(),
+            renderer = autoDetectRenderer(800, 600);
         // add the canvas
         document.body.appendChild(renderer.view);
         scaleToWindow(renderer.view);
@@ -44,18 +51,24 @@
 
         // this setup function will run when the image is loaded
         let setup = () => {
-            let pixie = new PIXI.Sprite(
-                    PIXI.loader.resources['assets/pixie96x48.png'].texture
+            let pixie = new Sprite(
+                    resources['assets/pixie96x48.png'].texture
             );
             renderer.backgroundColor = 0xffffff;
             stage.addChild(pixie);
+            // stage.removeChild(pixie);
+            // pixie.visible = false;
+            // pixie.destroy(true, true);
             renderer.render(stage);
             renderer.view.style.opacity = 1;
         };
+
+
         // Using PIXI's build in loader object to load the image
         PIXI.loader
                 .add('assets/pixie96x48.png')
                 .load(setup);
+
         // scale to the browser window
         window.addEventListener('resize', () => {
             scaleToWindow(renderer.view);
