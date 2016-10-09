@@ -5,28 +5,50 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PixiJS</title>
     <style>
         * {padding: 0; margin: 0;}
     </style>
     <script src="../libs/scaleToWindow/scaleToWindow.js"></script>
-    <title>PixiJS</title>
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.3/pixi.min.js"></script>
     <script>
         // create the renderer
         let renderer = PIXI.autoDetectRenderer(800, 600);
+        /* You can also create a renderer with more advanced options like this:
+         //Create a Pixi renderer
+         var renderer = PIXI.autoDetectRenderer(
+         256,                     //Width
+         256,                     //Height
+         {                        //Options
+         antialiasing: false,
+         transparent: false,
+         resolution: 1
+         },
+         false                    //Optionally force canvas rendering
+         );
+
+         //Force canvas rendering like this:
+         //var renderer = new PIXI.CanvasRenderer(256, 256);
+
+         //Force WebGL rendering like this:
+         //var renderer = new PIXI.WebGLRenderer(256, 256);
+        */
+
+        // add the canvas
+        document.body.appendChild(renderer.view);
+
         // create a container object called stage
         let stage = new PIXI.Container();
 
         // renderer.view.style.border = '5px solid navy';
         renderer.backgroundColor = 0xffffff;
 
-        // add the canvas
-        document.body.appendChild(renderer.view);
         // tell the renderer to render the stage
         renderer.render(stage);
 
+        // scale to the browser window
         scaleToWindow(renderer.view);
         window.addEventListener('resize', () => {
             scaleToWindow(renderer.view);
