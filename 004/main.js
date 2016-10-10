@@ -1,4 +1,4 @@
-// module example
+// modules
 import { scaleToWindow } from './src/scaleToWindow';
 
 // Aliases
@@ -23,11 +23,14 @@ let setup = () => {
     stage.addChild(pixie);
     renderer.render(stage);
     renderer.view.style.opacity = 1;
+    console.log('setup');
 };
-
+// loading
+let loadProgressHandler = (loader, resource) => console.log(`loading: ${resource.url}, ${loader.progress}`);
 // Using PIXI's build in loader object to load the image
 PIXI.loader
     .add('assets/pixie96x48.png')
+    .on('progress', loadProgressHandler)
     .load(setup);
 
 // scale to the browser window
