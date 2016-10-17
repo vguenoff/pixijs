@@ -31,7 +31,7 @@ let setup = () => {
     adventuress.x = 64;
     adventuress.y = 64;
     // scale the sprite up sp it's 3 times bigger then the original image
-    adventuress.scale.set(3, 3);
+    adventuress.scale.set(6, 6);
     stage.addChild(adventuress);
 
     renderer.backgroundColor = 0xffffff;
