@@ -1,7 +1,8 @@
 // modules
 import { scaleToWindow } from './src/scaleToWindow';
 import { frame } from './src/frame';
-import { keyboard } from './src/keyboard';
+// import { keyboard } from './src/keyboard';
+import { keyControl } from './src/keyControl';
 // aliases
 let Container = PIXI.Container,
     autoDetectRenderer = PIXI.autoDetectRenderer,
@@ -18,30 +19,7 @@ let stage = new Container(),
 // add the canvas and scale to window
 document.getElementById('game').appendChild(renderer.view);
 scaleToWindow(renderer.view);
-// pixie key control
-let pixieKeyControl = () => {
-    // capture the keyboard arrows
-    let left = keyboard(37),
-        up = keyboard(38),
-        right = keyboard(39),
-        down = keyboard(40);
-    // left
-    // change the sprite velocity when the key is pressed
-    left.press = () => { pixie.vx = -5; pixie.vy = 0; };
-    // if the left arrow has been released, and the right arrow isn't down
-    // and the pixie isn't moving vertically, stop the sprite form moving
-    // by setting it's velocity to zero
-    left.release = () => { if(!right.isDown && pixie.vy === 0) pixie.vx = 0; };
-    // up
-    up.press = () => { pixie.vy = -5; pixie.vx = 0; };
-    up.release = () => { if(!down.isDown && pixie.vx === 0) pixie.vy = 0; };
-    // right
-    right.press = () => { pixie.vy = 0; pixie.vx = 5; };
-    right.release = () => { if(!left.isDown && pixie.vy === 0) pixie.vx = 0; };
-    // down
-    down.press = () => { pixie.vy = 5; pixie.vx = 0; };
-    down.release = () => { if(!up.isDown && pixie.vx === 0) pixie.vy = 0; };
-};
+
 // play function
 let play = () => {
     // apply the velocity values to sprite's position to make it move
@@ -70,7 +48,7 @@ let setup = () => {
     pixie.vx = 0;
     pixie.vy = 0;
     // add pixie key control
-    pixieKeyControl();
+    keyControl(pixie);
     // state
     state = play;
     // add the sprite to the stage
