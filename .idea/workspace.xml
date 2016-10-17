@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c84965-b53e-40be-95cc-2a6e9d35ee09" name="Default" comment="PIXI Aliases">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js" afterPath="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js.map" afterPath="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/008-moving-sprites/main.js" afterPath="$PROJECT_DIR$/008-moving-sprites/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/008-moving-sprites/src/keyControl.js" afterPath="$PROJECT_DIR$/008-moving-sprites/src/keyControl.js" />
     </list>
     <ignored path="pixijs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +38,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/008-moving-sprites/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+            <state relative-caret-position="562">
+              <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
               <folding>
                 <element signature="e#11#63#0" expanded="true" />
               </folding>
@@ -333,7 +329,7 @@
       <workItem from="1475921134569" duration="1719000" />
       <workItem from="1475935662999" duration="7166000" />
       <workItem from="1476091263025" duration="788000" />
-      <workItem from="1476092555117" duration="51987000" />
+      <workItem from="1476092555117" duration="52035000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;">
       <created>1475912735886</created>
@@ -381,7 +377,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68660000" />
+    <option name="totallyTimeSpent" value="68708000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -857,8 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/008-moving-sprites/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        <state relative-caret-position="562">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
           <folding>
             <element signature="e#11#63#0" expanded="true" />
           </folding>

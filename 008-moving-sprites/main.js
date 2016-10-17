@@ -50,14 +50,14 @@ let setup = () => {
     // initialize the sprites velocity variables
     pixie.vx = 0;
     pixie.vy = 0;
-    //Acceleration and friction properties
+    // acceleration and friction properties
     pixie.accelerationX = 0;
     pixie.accelerationY = 0;
     pixie.frictionX = 1;
     pixie.frictionY = 1;
-    //Set the pixie's speed
+    // set the pixie's speed
     pixie.speed = 0.2;
-    //The friction resistance
+    // the friction resistance
     pixie.drag = 0.98;
     // add pixie key control with speed and drag
     keyControl(pixie);
