@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c84965-b53e-40be-95cc-2a6e9d35ee09" name="Default" comment="PIXI Aliases">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/008-moving-sprites/assets/pixie96x48.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/008-moving-sprites/src/keyboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/006-tileset/_build/bundle.js" afterPath="$PROJECT_DIR$/006-tileset/_build/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/006-tileset/_build/bundle.js.map" afterPath="$PROJECT_DIR$/006-tileset/_build/bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/006-tileset/main.js" afterPath="$PROJECT_DIR$/006-tileset/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js" afterPath="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js.map" afterPath="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/008-moving-sprites/main.js" afterPath="$PROJECT_DIR$/008-moving-sprites/main.js" />
@@ -42,11 +39,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="keyboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/008-moving-sprites/src/keyboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/008-moving-sprites/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="397">
+              <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
               <folding>
                 <element signature="e#11#63#0" expanded="true" />
               </folding>
@@ -90,6 +97,7 @@
         <option value="$PROJECT_DIR$/008-moving-sprites/_build/bundle.js" />
         <option value="$PROJECT_DIR$/006-tileset/main.js" />
         <option value="$PROJECT_DIR$/006-tileset/src/frame.js" />
+        <option value="$PROJECT_DIR$/008-moving-sprites/src/keyboard.js" />
         <option value="$PROJECT_DIR$/008-moving-sprites/main.js" />
       </list>
     </option>
@@ -216,21 +224,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="006-tileset" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pixijs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pixijs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="006-tileset" />
+              <option name="myItemId" value="008-moving-sprites" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -338,7 +332,7 @@
       <workItem from="1475921134569" duration="1719000" />
       <workItem from="1475935662999" duration="7166000" />
       <workItem from="1476091263025" duration="788000" />
-      <workItem from="1476092555117" duration="44490000" />
+      <workItem from="1476092555117" duration="49395000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;">
       <created>1475912735886</created>
@@ -386,7 +380,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61163000" />
+    <option name="totallyTimeSpent" value="66068000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -490,20 +484,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/001/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/001/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/001/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -857,10 +837,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/008-moving-sprites/src/frame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/008-moving-sprites/src/keyboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/008-moving-sprites/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="397">
+          <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
           <folding>
             <element signature="e#11#63#0" expanded="true" />
           </folding>
