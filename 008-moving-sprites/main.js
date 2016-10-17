@@ -1,6 +1,6 @@
 // modules
 import { scaleToWindow } from './src/scaleToWindow';
-import { randomInt } from './src/randomInt';
+// import { randomInt } from './src/randomInt';
 
 // aliases
 let Container = PIXI.Container,
@@ -14,62 +14,36 @@ let Container = PIXI.Container,
 // create stage and the renderer
 let stage = new Container(),
     renderer = autoDetectRenderer(512, 512);
-
 // add the canvas and scale to window
 document.getElementById('game').appendChild(renderer.view);
 scaleToWindow(renderer.view);
-
-// making the blob
-let blobMaker = (numOfBlobs, spacing, xOffset) => {
-    for(let i = 0; i < numOfBlobs; i++) {
-        // make a blob
-        let blob = new Sprite(resources["assets/treasureHunter.json"].textures["blob.png"]),
-            // space each blob horizontally according to the 'spacing' value
-            // 'xOffset' determines the point from the left of the screen at which the first blob should be added
-            x = spacing * i + xOffset,
-            // give the blob a random y position
-            y = randomInt(0, stage.height - blob.height);
-            // set the blob position
-        blob.position.set(x, y);
-            // add the blob sprite to the stage
-        stage.addChild(blob);
-    }
+// game elements
+let pixie;
+// game loop
+let gameLoop = () => {
+    // loop this function 60 times per second
+    requestAnimationFrame(gameLoop);
+    // move the sprite 1px per frame
+    pixie.x += 10;
+    // render the stage
+    renderer.render(stage);
 };
-
-// game elements and setup
-let dungeon,
-    explorer,
-    treasure,
-    door,
-    setup = () => {
-        // dungeon
-        dungeon = new Sprite(resources["assets/treasureHunter.json"].textures["dungeon.png"]);
-        stage.addChild(dungeon);
-        // explorer
-        explorer = new Sprite(resources["assets/treasureHunter.json"].textures["explorer.png"]);
-        explorer.x = 68;
-        explorer.y = stage.height / 2 - explorer.height / 2;
-        stage.addChild(explorer);
-        // treasure
-        treasure = new Sprite(resources["assets/treasureHunter.json"].textures["treasure.png"]);
-        treasure.x = stage.width - treasure.width - 48;
-        treasure.y = stage.height / 2 - treasure.height / 2;
-        stage.addChild(treasure);
-        // door
-        door = new Sprite(resources["assets/treasureHunter.json"].textures["door.png"]);
-        door.position.set(door.width, 0);
-        stage.addChild(door);
-
-        // make 6 blobs
-        blobMaker(6, 48, 150);
-
-        renderer.render(stage);
-        renderer.view.style.opacity = 1;
+// setup
+let setup = () => {
+    // create the pixie sprite
+    pixie = new Sprite(resources["assets/pixie96x48.png"].texture);
+    // center the sprite vertically in the stage
+    pixie.x = -pixie.width * 2;
+    pixie.y = renderer.view.height / 2 - pixie.height / 2;
+    // add the sprite to the stage
+    stage.addChild(pixie);
+    // show the stage
+    renderer.view.style.opacity = 1;
+    gameLoop();
 };
-
-// pre loader
+// preloader
 loader
-    .add('assets/treasureHunter.json')
+    .add('assets/pixie96x48.png')
     .load(setup);
 
 // scale to the browser window on resize
