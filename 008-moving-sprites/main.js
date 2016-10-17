@@ -19,9 +19,14 @@ let stage = new Container(),
 // add the canvas and scale to window
 document.getElementById('game').appendChild(renderer.view);
 scaleToWindow(renderer.view);
-
 // play function
 let play = () => {
+    // apply acceleration by adding the acceleration to the sprite’s velocity
+    pixie.vx += pixie.accelerationX;
+    pixie.vy += pixie.accelerationY;
+    // apply friction by multiplying sprite’s velocity by the friction
+    pixie.vx *= pixie.frictionX;
+    pixie.vy *= pixie.frictionY;
     // apply the velocity values to sprite's position to make it move
     pixie.x += pixie.vx;
     pixie.y += pixie.vy;
@@ -38,16 +43,23 @@ let gameLoop = () => {
 // setup
 let setup = () => {
     // create the pixie sprite
-    // pixie = new Sprite(resources["assets/pixie96x64.png"].texture);
     pixie = new Sprite(frame('assets/pixie96x64.png', 0, 0, 96, 64));
-    // position the sprite on the top left corner
-    // pixie.scale.set(5, 5);
+    // position the sprite in the center
     pixie.x = renderer.view.width / 2 - pixie.width / 2;
     pixie.y = renderer.view.height / 2 - pixie.height / 2;
     // initialize the sprites velocity variables
     pixie.vx = 0;
     pixie.vy = 0;
-    // add pixie key control
+    //Acceleration and friction properties
+    pixie.accelerationX = 0;
+    pixie.accelerationY = 0;
+    pixie.frictionX = 1;
+    pixie.frictionY = 1;
+    //Set the pixie's speed
+    pixie.speed = 0.2;
+    //The friction resistance
+    pixie.drag = 0.98;
+    // add pixie key control with speed and drag
     keyControl(pixie);
     // state
     state = play;
