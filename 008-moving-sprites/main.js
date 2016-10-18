@@ -3,6 +3,7 @@ import { scaleToWindow } from './src/scaleToWindow';
 import { frame } from './src/frame';
 // import { keyboard } from './src/keyboard';
 import { keyControl } from './src/keyControl';
+import { contain } from './src/contain';
 // aliases
 let Container = PIXI.Container,
     autoDetectRenderer = PIXI.autoDetectRenderer,
@@ -19,6 +20,7 @@ let stage = new Container(),
 // add the canvas and scale to window
 document.getElementById('game').appendChild(renderer.view);
 scaleToWindow(renderer.view);
+
 // play function
 let play = () => {
     // apply acceleration by adding the acceleration to the sprite’s velocity
@@ -32,6 +34,19 @@ let play = () => {
     // apply the velocity values to sprite's position to make it move
     pixie.x += pixie.vx;
     pixie.y += pixie.vy;
+    // use the contain function to keep the sprite inside the canvas
+    let collision = contain(pixie, {
+        x: 0,
+        y: 0,
+        width: renderer.view.width,
+        height: renderer.view.height
+    });
+    if(collision) {
+        // reverse the sprite's vx and vy if a collision occurs
+        if(collision.has('left') || collision.has('right')) pixie.vx = -pixie.vx;
+        if(collision.has('top') || collision.has('bottom')) pixie.vy = -pixie.vy;
+    }
+
 };
 // game loop
 let gameLoop = () => {
@@ -79,3 +94,4 @@ loader
 window.addEventListener('resize', () => {
     scaleToWindow(renderer.view);
 });
+
