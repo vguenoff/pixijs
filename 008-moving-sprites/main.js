@@ -27,6 +27,8 @@ let play = () => {
     // apply friction by multiplying sprite’s velocity by the friction
     pixie.vx *= pixie.frictionX;
     pixie.vy *= pixie.frictionY;
+    // gravity
+    pixie.vy += 0.1;
     // apply the velocity values to sprite's position to make it move
     pixie.x += pixie.vx;
     pixie.y += pixie.vy;
