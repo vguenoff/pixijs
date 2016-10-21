@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/002/index.html" libraries="{WebGL}" />
     <file url="file://$PROJECT_DIR$/003" libraries="{pixijs/003/node_modules}" />
     <file url="file://$PROJECT_DIR$/004" libraries="{pixijs/004/node_modules}" />
+    <file url="file://$PROJECT_DIR$/006-tileset" libraries="{pixijs/006-tileset/node_modules}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
   </component>
 </project>
