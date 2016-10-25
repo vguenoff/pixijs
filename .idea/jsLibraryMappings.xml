@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/003" libraries="{pixijs/003/node_modules}" />
+    <file url="file://$PROJECT_DIR$/004" libraries="{pixijs/004/node_modules}" />
+    <file url="file://$PROJECT_DIR$/005-positioning-sprites" libraries="{pixijs/005-positioning-sprites/node_modules}" />
+    <file url="file://$PROJECT_DIR$/006-tileset" libraries="{pixijs/006-tileset/node_modules}" />
+    <file url="file://$PROJECT_DIR$/007-texture-atlas" libraries="{pixijs/007-texture-atlas/node_modules}" />
+    <file url="file://$PROJECT_DIR$/008-moving-sprites" libraries="{pixijs/008-moving-sprites/node_modules}" />
+    <file url="file://$PROJECT_DIR$/009-shapes" libraries="{pixijs/009-shapes/node_modules}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
   </component>
 </project>

@@ -19,6 +19,8 @@ renderer.backgroundColor = '0xffffff';
 // add the canvas and scale to window
 document.getElementById('game').appendChild(renderer.view);
 scaleToWindow(renderer.view);
+// set the game state
+let state = play;
 // any animation or game logic goes here
 let play = () => {
     console.log('play');
@@ -50,9 +52,6 @@ let setup = () => {
     renderer.view.style.opacity = 1;
     gameLoop();
 };
-// set the game state
-let state = play;
-
 // preloader
 loader
     .add('fonts/puzzler.otf')
